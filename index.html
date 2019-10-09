@@ -13,11 +13,6 @@
         //#region Converter constructor function 
         function Converter() {
             this.binaryNumbers = [];
-            this.getBinaryNumbers = function() {
-                for (let i in this.binaryNumbers) {
-                    console.log(this.binaryNumbers[i]);
-                }
-            }
         }
         //#endregion
 
@@ -39,8 +34,8 @@
 		}
 		//#endregion
 
-        //#region Prototypical inheritence GetNDigitBinaryNumbers function added to Converter object
-        Converter.prototype.GetNDigitBinaryNumbers = function(n) {
+        //#region Prototypical inheritence getNDigitBinaryNumbers function added to Converter object
+        Converter.prototype.getNDigitBinaryNumbers = function(n) {
 			let startingPoint = Math.pow(2, n - 1);
 			let endingPoint = Math.pow(2, n) - 1;
 
@@ -51,6 +46,14 @@
 				this.binaryNumbers.push(this.toBinary(i));
 			}
 		}
+		//#endregion
+
+		//#region Prototypical inheritence getBinaryNumbers function added to Converter object
+        Converter.prototype.getBinaryNumbers = function() {
+                for (let i in this.binaryNumbers) {
+                    console.log(this.binaryNumbers[i]);
+                }
+            }
 		//#endregion
     </script>
 </body>
