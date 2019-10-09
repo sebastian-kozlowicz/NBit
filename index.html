@@ -5,82 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+	<title>Binary strings generator</title>
+	<script src="Models/Converter.js" type="text/javascript"></script>
+	<script src="Models/Timer.js" type="text/javascript"></script>
 </head>
 
 <body>
     <script>
-		//#region Converter 
-        //#region Converter constructor function 
-        function Converter() {
-            this.binaryNumbers = [];
-        }
-        //#endregion
-
-        //#region Prototypical inheritence toBinary function added to Converter base object
-        Converter.prototype.toBinary = function(n) {
-			let remainder;
-			let convertedString = '';
-
-			if (n == 0)
-				return '0';
-
-			while (n > 0) {
-				remainder = Math.floor(n % 2);
-				convertedString = remainder + convertedString;
-				n = Math.floor(n / 2);
-			}
-
-			return convertedString;
-		}
-		//#endregion
-
-        //#region Prototypical inheritence getNDigitBinaryNumbers function added to Converter base object
-        Converter.prototype.getNDigitBinaryNumbers = function(n) {
-			let startingPoint = Math.pow(2, n - 1);
-			let endingPoint = Math.pow(2, n) - 1;
-
-			if (n == 1)
-				startingPoint--;
-
-			for (let i = startingPoint; i <= endingPoint; i++) {
-				this.binaryNumbers.push(this.toBinary(i));
-			}
-		}
-		//#endregion
-
-		//#region Prototypical inheritence getBinaryNumbers function added to Converter object
-        Converter.prototype.getBinaryNumbers = function() {
-                for (let i in this.binaryNumbers) {
-                    console.log(this.binaryNumbers[i]);
-                }
-            }
-		//#endregion
-		//#endregion
-
-		//#region Timer
-		//#region Timer constructor function 
-		function Timer() {
-			this.elapsedTime;
-			let startTime;
-			let endTime;
-		}
-		//#endregion
-
-		//#region Prototypical inheritence start function added to Timer base object
-		Timer.prototype.start = function() {
-			startTime = new Date();
-		}
-		//#endregion
-
-		//#region Prototypical inheritence end function added to Timer base object
-		Timer.prototype.end = function() {
-			endTime = new Date();
-			let timeDifference = endTime - startTime;
-			return timeDifference /= 1000;
-		}
-		//#endregion
-		//#endregion
+		
     </script>
 </body>
 
