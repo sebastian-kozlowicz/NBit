@@ -10,16 +10,17 @@
     <script src="libraries/jquery-3.4.1.min.js"></script>
     <script src="models/Converter.js" type="text/javascript"></script>
     <script src="models/Timer.js" type="text/javascript"></script>
+    <script src="models/index.js" type="text/javascript"></script>
 </head>
 
 <body>
     <div class="container">
         <div class="group">
             <label>Insert number of bits output you want to generate</label>
-            <input type="text" id="bitsNumber">
+            <input type="text" id="bitsNumber" />
         </div>
 
-        <button type="button">Generate</button>
+        <button id="generate" type="button">Generate</button>
 
         <div class="group">
             <label>Results</label>
@@ -32,9 +33,7 @@
         </div>
     </div>
 
-    <script>
-        $(document).ready(function() {});
-    </script>
+
 </body>
 
 </html>
