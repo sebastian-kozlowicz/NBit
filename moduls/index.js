@@ -1,10 +1,13 @@
 $(document).ready(function() {
     $('#generate').on('click', function() {
-        let converter = new Converter();
         let timer = new Timer();
+        let converter = new Converter();
 
+        timer.start();
         converter.getNDigitBinaryNumbers($('#bitsNumber').val());
+        timer.stop();
 
         $('#results').val(converter.getBinaryNumbers());
+        $('#timeElapsed').text(timer.elapsedTime);
     });
 });

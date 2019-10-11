@@ -13,9 +13,8 @@ Timer.prototype.start = function() {
 //#endregion
 
 //#region Prototypical inheritence end function added to Timer base object
-Timer.prototype.end = function() {
+Timer.prototype.stop = function() {
 	endTime = new Date();
-	let timeDifference = endTime - startTime;
-	return timeDifference /= 1000;
+	this.elapsedTime = (endTime - startTime) / 1000;
 }
 //#endregion
