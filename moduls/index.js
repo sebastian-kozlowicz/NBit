@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('#generate').on('click', function() {
-        let timer = new Timer();
         let converter = new Converter();
+        let timer = new Timer();
 
         timer.start();
         converter.getNDigitBinaryNumbers($('#bitsNumber').val());

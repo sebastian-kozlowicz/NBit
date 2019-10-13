@@ -1,20 +1,17 @@
-//#region Timer constructor function 
-function Timer() {
-    this.elapsedTime;
-    let startTime;
-    let endTime;
-}
-//#endregion
+const _startTime = new WeakMap();
+const _endTime = new WeakMap();
 
-//#region Prototypical inheritence start function added to Timer base object
-Timer.prototype.start = function() {
-	startTime = new Date();
-}
-//#endregion
+class Timer {
+    constructor() {
+        this.elapsedTime;
+    }
 
-//#region Prototypical inheritence end function added to Timer base object
-Timer.prototype.stop = function() {
-	endTime = new Date();
-	this.elapsedTime = (endTime - startTime) / 1000;
+    start() {
+        _startTime.set(this, new Date);
+    }
+
+    stop() {
+        _endTime.set(this, new Date);
+        this.elapsedTime = (_endTime.get(this) - _startTime.get(this)) / 1000;
+    }
 }
-//#endregion
