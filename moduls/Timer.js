@@ -12,6 +12,6 @@ class Timer {
 
     stop() {
         _endTime.set(this, new Date);
-        this.elapsedTime = (_endTime.get(this) - _startTime.get(this)) / 1000;
+        this.elapsedTime = ((_endTime.get(this) - _startTime.get(this)) / 1000).toFixed(3);
     }
 }
