@@ -8,6 +8,6 @@ $(document).ready(function() {
         timer.stop();
 
         $('#results').val(converter.getBinaryNumbers());
-        $('#timeElapsed').text(timer.elapsedTime);
+        $('#timeElapsed').text(timer.elapsedTime + 's');
     });
 });
