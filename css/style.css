@@ -29,5 +29,5 @@ textarea {
 
 button {
     margin: 0 auto;
-    display: block;
+    display: inline-block;
 }
