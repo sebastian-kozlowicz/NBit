@@ -1,18 +1,17 @@
-class Formater {
+class Formatter {
     constructor() {}
 
     setFormat(n, maxNLength) {
         if (n.length != maxNLength) {
             let neededZeros = maxNLength - n.length;
-            let zeros = '';
+            let zeroAccumulator = '';
 
             for (let i = 0; i < neededZeros; i++) {
-                zeros += '0';
+                zeroAccumulator += '0';
             }
 
-            return zeros + n;
-        } else {
-            return n;
+            return zeroAccumulator + n;
         }
+        return n;
     }
 }

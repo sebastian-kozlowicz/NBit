@@ -18,13 +18,13 @@ class Converter {
 
     getNDigitBinaryNumbers(n) {
         //let startingPoint = Math.pow(2, n - 1);
-        let formater = new Formater();
+        let formatter = new Formatter();
         let startingPoint = 0;
         let endingPoint = Math.pow(2, n) - 1;
 
         for (let i = startingPoint; i <= endingPoint; i++) {
             this.binaryNumbers.push(
-                formater.setFormat(this.toBinary(i), n)
+                formatter.setFormat(this.toBinary(i), n)
             );
         }
     }
