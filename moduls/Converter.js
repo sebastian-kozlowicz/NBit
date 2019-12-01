@@ -20,8 +20,7 @@ class Converter {
         //let startingPoint = Math.pow(2, n - 1);
         let startingPoint = 0;
         let endingPoint = Math.pow(2, n) - 1;
-        if (n == 1)
-            startingPoint--;
+
         for (let i = startingPoint; i <= endingPoint; i++) {
             this.binaryNumbers.push(this.toBinary(i));
         }
